@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form lấy survey khách hàng</title>
+</head>
+<body>
+<form><h2>Market Research Survey</h2>
+Please take a few moments to complete this satisfaction survey.<br/>
+<hr>
+<b>What is your age range?</b><br>
+<select name="age">
+    <option value="18-24">18-24</option>
+    <option value="25-31">25-31</option>
+</select><br/>
+<b>What is your yearly income range?</b><br/>
+<select name="income">
+    <option value="$0 - $25,000">$0 - $25,000</option>
+    <option value="$26,000 - $50,000">$26,000 - $50,000</option>
+</select><br/>
+<b>Gender</b><br/>
+<label><input type="radio" name="male">Male</label><br/>
+<label><input type="radio" name="female">Femle</label><br/>
+<b>How often would you use our new product?</b><br/>
+<label><input type="radio" name="Daily">Daily</label><br/>
+<label><input type="checkbox" name="Weekly">Weekly</label><br/>
+<label><input type="checkbox" name="Monthly">Monthly</label><br/>
+<b>What would you pay for the new product?</b><br/>
+<table><tr><td>$</td>
+<td><input type="text" name="dollars"></td>
+<td>.</td>
+<td><input type="text" name="cents"></td>
+</tr>
+<tr><td></td><td>Dollars</td><td></td><td>Cents</td>
+</tr></table>
+    <b>What features would you like to sê in the new product.</b><br/>
+    <input type="textarea" style="width: 500px; height: 100px"><br/>
+    <input type="submit">
+</form>
+</body>
+</html>
