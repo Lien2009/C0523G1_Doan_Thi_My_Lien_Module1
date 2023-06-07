@@ -9,5 +9,45 @@
 <input type="number" id="numberA">
 <input type="number" id="numberB">
 <br/>
+<button onclick="plus()">Addition(+)</button>
+<button onclick="minus()">Subtraction(-)</button>
+<button onclick="mul()">Multiplication(X)</button>
+<button onclick="div()">Division(/)</button>
+<div id="addition"></div>
+<div id="subtraction"></div>
+<div id="multiplication"></div>
+<div id="division"></div>
+<script>
+    function plus() {
+        let a=document.getElementById('numberA').value;
+        let b=document.getElementById('numberB').value;
+        let plus= parseFloat(a)+parseFloat(b)
+        document.getElementById('addition').innerHTML= "Result Addition: " + plus
+    }
+</script>
+<script>
+    function minus() {
+        let a=document.getElementById('numberA').value;
+        let b=document.getElementById('numberB').value;
+        let minus= parseFloat(a)-parseFloat(b)
+        document.getElementById('subtraction').innerHTML= "Result Subtraction: " + minus
+    }
+</script>
+<script>
+    function mul() {
+        let a=document.getElementById('numberA').value;
+        let b=document.getElementById('numberB').value;
+        let mul= parseFloat(a)*parseFloat(b)
+        document.getElementById('multiplication').innerHTML= "Result Multiplication: " + mul
+    }
+</script>
+<script>
+    function div() {
+        let a=document.getElementById('numberA').value;
+        let b=document.getElementById('numberB').value;
+        let div= parseFloat(a)/parseFloat(b)
+        document.getElementById('division').innerHTML= "Result Division: " + div
+    }
+</script>
 </body>
 </html>
