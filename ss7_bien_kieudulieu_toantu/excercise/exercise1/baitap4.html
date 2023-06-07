@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<input type="number" id="r">
+<button onclick="chuVi()">Chu vi</button>
+<script>
+  function chuVi() {
+    let r = document.getElementById('r').value;
+    let c = parseFloat(r)*2*3.14
+    document.getElementById("result").innerHTML = c
+  }
+</script>
+<div id="result"></div>
+</body>
+</html>
