@@ -19,33 +19,30 @@
 <div id="division"></div>
 <script>
     function plus() {
-        let a=document.getElementById('numberA').value;
-        let b=document.getElementById('numberB').value;
-        let plus= parseFloat(a)+parseFloat(b)
+        let a=+document.getElementById('numberA').value;
+        let b=+document.getElementById('numberB').value;
+        let plus= a+b
         document.getElementById('addition').innerHTML= "Result Addition: " + plus
     }
-</script>
-<script>
+
     function minus() {
-        let a=document.getElementById('numberA').value;
-        let b=document.getElementById('numberB').value;
-        let minus= parseFloat(a)-parseFloat(b)
+        let a=+document.getElementById('numberA').value;
+        let b=+document.getElementById('numberB').value;
+        let minus= a-b
         document.getElementById('subtraction').innerHTML= "Result Subtraction: " + minus
     }
-</script>
-<script>
+
     function mul() {
-        let a=document.getElementById('numberA').value;
-        let b=document.getElementById('numberB').value;
-        let mul= parseFloat(a)*parseFloat(b)
+        let a=+document.getElementById('numberA').value;
+        let b=+document.getElementById('numberB').value;
+        let mul= a*b
         document.getElementById('multiplication').innerHTML= "Result Multiplication: " + mul
     }
-</script>
-<script>
+
     function div() {
-        let a=document.getElementById('numberA').value;
-        let b=document.getElementById('numberB').value;
-        let div= parseFloat(a)/parseFloat(b)
+        let a=+document.getElementById('numberA').value;
+        let b=+document.getElementById('numberB').value;
+        let div= a/b
         document.getElementById('division').innerHTML= "Result Division: " + div
     }
 </script>
