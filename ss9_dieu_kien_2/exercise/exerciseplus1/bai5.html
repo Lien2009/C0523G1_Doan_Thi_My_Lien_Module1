@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+  let day = +prompt("Nhập điểm bài kiểm tra");
+  let midterm = +prompt("Nhập điểm thi giữa kỳ");
+  let final = +prompt("Nhập điểm thi cuối kỳ");
+  let total = (day + midterm*2 + final*3)/6;
+  if (total > 8.5) {
+    alert ("Học sinh giỏi");
+  } else if (total > 7) {
+    alert ("Hoọc sinh khá");
+  } else if (total > 5) {
+    alert ("Học sinh trung bình");
+  } else {
+    alert ("Học sinh kém")
+  }
+</script>
+</body>
+</html>

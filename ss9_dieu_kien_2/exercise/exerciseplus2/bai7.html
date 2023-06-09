@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Nhập hệ số bậc 2: ");
+  let b = +prompt("Nhập hệ số bậc 1: ");
+  let c = +prompt("Nhập hằng số: ");
+  let denta = b*b - 4*a*c;
+  let resultOne= (-b + denta**(1/2))/(2*a);
+  let resultTwo= (-b - denta**(1/2))/(2*a);
+  if (denta < 0) {
+    alert ("Vô nghiệm");
+  } else if (denta = 0) {
+    alert ("Có 1 nghiệm: " + -b/(2*a));
+  } else {
+    alert ("Có 2 nghiệm: " + resultOne+ " và " + resultTwo)
+  }
+
+</script>
+</body>
+</html>

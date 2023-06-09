@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<script>
+  let chiSo = +prompt("Lượng điện tiêu thụ: ");
+  if (chiSo<51) {
+    alert ("Gía điện là: " + 1600*chiSo);
+  } else if (chiSo<101) {
+    alert ("Gía điện là: " + (1600*50+1700*(chiSo-50)));
+  } else {
+    alert ("Gía điện là: " + (1600*50+1700*50+2000*(chiSo-100)));
+  }
+</script>
+</body>
+</html>

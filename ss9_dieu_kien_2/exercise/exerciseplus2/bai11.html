@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+<script>
+  //thuế TNCN = (TN chịu thuế - các khoản giảm trừ) * thuế suất
+  // giảm trừ bản thân là 11tr, người phụ thuộc là 4,4tr
+  let salary = +prompt("Lương sau các khoản bảo hiểm và quỹ:");
+  let person = +prompt("Số người phụ thuộc:");
+  let salaryTax = salary - 11000000 - (person*4400000);
+  if (salaryTax <=0) {
+    alert ("không nộp thuế TNCN")
+  }
+  else if (salaryTax <= 5000000) {
+    alert ("thuế TNCN: " + salaryTax*0.05);
+  } else if (salaryTax <= 10000000) {
+    alert ("thuế TNCN: " + (salaryTax*0.1 - 250000));
+  } else {
+    alert ("thuế TNCN: " + (salaryTax*0.2 - 750000));
+  }
+</script>
+</body>
+</html>
