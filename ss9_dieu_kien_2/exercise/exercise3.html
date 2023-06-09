@@ -18,28 +18,28 @@
         </td>
     </tr>
     <tr>
-        <td><button type="button" onclick="input('1')">1</button></td>
-        <td><button value="2" onclick="input('2')">2</button></td>
-        <td><button value="3" onclick="input('3')">3</button></td>
-        <td><button value="+" onclick="input('+')">+</button></td>
+        <td><button onclick="input('1')">1</button></td>
+        <td><button onclick="input('2')">2</button></td>
+        <td><button onclick="input('3')">3</button></td>
+        <td><button onclick="input('+')">+</button></td>
     </tr>
     <tr>
-        <td><button value="4" onclick="input('4')">4</button></td>
-        <td><button value="5" onclick="input('5')">5</button></td>
-        <td><button value="6" onclick="input('6')">6</button></td>
-        <td><button value="-" onclick="input('-')">-</button></td>
+        <td><button onclick="input('4')">4</button></td>
+        <td><button onclick="input('5')">5</button></td>
+        <td><button onclick="input('6')">6</button></td>
+        <td><button onclick="input('-')">-</button></td>
     </tr>
     <tr>
-        <td><button value="7" onclick="input('7')">7</button></td>
-        <td><button value="8" onclick="input('8')">8</button></td>
-        <td><button value="9" onclick="input('9')">9</button></td>
-        <td><button value="x" onclick="input('*')">x</button></td>
+        <td><button onclick="input('7')">7</button></td>
+        <td><button onclick="input('8')">8</button></td>
+        <td><button onclick="input('9')">9</button></td>
+        <td><button onclick="input('*')">x</button></td>
     </tr>
     <tr>
-        <td><button value="reset" onclick="input('c')">C</button></td>
-        <td><button value="0" onclick="input('0')">0</button></td>
-        <td><button value="=" onclick="input('=')">=</button></td>
-        <td><button value="/" onclick="input('/')">/</button></td>
+        <td><button onclick="input('c')">C</button></td>
+        <td><button onclick="input('0')">0</button></td>
+        <td><button onclick="input('=')">=</button></td>
+        <td><button onclick="input('/')">/</button></td>
     </tr>
 </table>
     <script>
@@ -60,7 +60,7 @@ function input(i) {
         case '-':
         case '*':
         case '/':
-            result = result + i;
+            result += i;
             break;
         case '=':
             result = eval(result);
@@ -69,7 +69,7 @@ function input(i) {
             result = '';
         break;
     }
-    document.getElementById("result").innerText = result;
+    document.getElementById("result").innerText= result;
 }
     </script>
 
