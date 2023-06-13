@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let sum = 1;
+    let total = 0;
+    for (let i = 0; i < 20; i++) {
+        total += a;
+        a = b;
+        b = sum;
+        sum = a + b;
+    } document.write(total);
+</script>
+</body>
+</html>

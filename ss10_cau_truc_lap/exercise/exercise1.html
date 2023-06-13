@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+</head>
+<body>
+<script>
+  let study = "<table border='1'>";
+  let i;
+  let j;
+    for (i=1;i<=9;i++) {
+        study += "<tr>";
+        for (j=2; j<=9; j++) {
+            study += "<td>" + j + "x" + i + "=" + (j*i) + "</td>";
+        }
+        study += "</tr>";
+    }
+    study += "</table>";
+    document.write(study);
+</script>
+</body>
+</html>

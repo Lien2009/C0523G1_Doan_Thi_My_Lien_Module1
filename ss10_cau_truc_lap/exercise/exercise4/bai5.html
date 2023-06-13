@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let saving = +prompt("Nhập số tiền bạn muôn gửi:");
+    let time = +prompt("Nhập thời gian gửi:");
+    let rate = +prompt("Nhập lãi suất tháng");
+    let money = saving * rate;
+    for (let i = 1; i < time; i++) {
+        money *= (1+rate);
+    } document.write("Lãi nhận cuối kỳ là: " + money + "đ");
+</script>
+</body>
+</html>
