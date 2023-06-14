@@ -6,14 +6,25 @@
 </head>
 <body>
 <script>
-    let number = +prompt("Enter number:");
-    for (let i = 2; i < number ; i++) {
-        if (number%i===0) {
-            alert ("Không phải số nguyên tố")
-        } else {
-
+    let num = 1; //số nguyên tố
+    let count = 0; //số lần hiển thị số NT
+    debugger
+    while (count < 20) {
+        // let flag = true;
+        let i = 2
+        for (; i < num; i++) {//3
+            if (num % i === 0) { //chia hết cho số nào từ 2 đến n-1 nên KO là SNT
+                // flag = false;
+                break;
+            }
         }
+        if (i === num) {
+        document.write(num + "<br/>");
+        count++;
     }
+        num++;
+    }
+
 
 </script>
 </body>
