@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    let max = +prompt("Nhập số lớn nhất:");
+    let min = +prompt("Nhập số bé nhất:");
+    let count = 0;
+    let game = Math.round(Math.random() * (max - min) + min);
+    alert(game);
+     do {
+         let num = +prompt("Mời bạn nhập vào số ưa thích:");
+         if (num === game) {
+             alert("Chúc mừng bạn đoán trúng");
+             break;
+         } else {
+             count++;
+         }
+     } while (count < 3);
+
+</script>
+
+</body>
+</html>
