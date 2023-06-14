@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị trong mảng</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập số cần kiểm tra:");
+    let x = [-3, 5, 1, 3, 2, 10];
+    let flag = true;
+    for (let i = 0; i < x.length; i++) {
+        if (num === x[i]) {
+            flag = false;
+            alert("Số " + num + " ở vị trí " + i);
+        }
+    }
+    if (flag) {
+        alert("Không có");
+    }
+</script>
+</body>
+</html>
