@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+let number = [1, 3, 7, 10, 11, 15, 4, 20, 30];
+let max = number[0];
+let sum = 0;
+debugger
+for (let i = 1; i < number.length; i++) {
+  sum += number[i];
+if (number[i] > max) {
+max = number[i];
+}
+}
+let avr = sum/number.length;
+document.write("Số lớn nhất trong dãy là: " + max + ". Gía trị trung bình: " + avr);
+
+</script>
+</body>
+</html>

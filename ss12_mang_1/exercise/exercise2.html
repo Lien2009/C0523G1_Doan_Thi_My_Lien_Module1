@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập từ cần tra:");
+    let vietNam = ['quả chuối', 'trái táo', 'trái cam', 'trái chanh', 'trái dừa'];
+    let english = ['banana', 'apple', 'orange', 'lemon', 'coconut'];
+    let i = english.indexOf(input); //vị trí input trong mảng english
+    if (i !== -1) { //indexOf ra kq khác -1 nghĩa là tìm thấy
+        alert(vietNam[i]);
+    } else {
+        alert("Không tìm thấy");
+    }
+</script>
+</body>
+</html>

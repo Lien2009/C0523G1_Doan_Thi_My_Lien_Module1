@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let v = +prompt('Enter V:');
+    let flag = true;
+    for (let i = 0; i < num.length; i++) {
+        if (v === num[i]) {
+            flag = false;
+            num.splice(i, 1); //xóa giá trị
+            num.push(0);
+        }
+    }
+    document.write(num);
+</script>
+</body>
+</html>

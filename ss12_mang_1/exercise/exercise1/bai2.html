@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+
+    let num = prompt("Enter number:");
+    num = num.split('') //chuyển chuỗi thành mảng
+    let result = []
+
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] % 2 === 0 && num[i + 1] % 2 === 0) {
+            result.push(num[i], "-");
+        } else {
+            result.push(num[i]);
+        }
+    }
+    document.write(result.join('')) //nối các phần tử của mảng lại với nhau
+
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập vào mảng ký tự cần sửa:");
+    input = input.split('');
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === '-') {
+            input.splice(i, 1, '_'); //thay thế phần tử
+        }
+    }
+    alert(input.join('')); //để kq không bị dấu phẩy ở giữa
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập chuỗi:");
+    input = input.split('');
+    let result = [];
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    for (let i = 0; i < input.length; i++) {
+        if (upper.includes(input[i])) { //tìm chuỗi input[i] có trong chuỗi upper ko
+            result.push(input[i].toLowerCase()); //push thêm phần tử vào mảng, toLowerCase làm viết thường input[i]
+        } else if (lower.includes(input[i])) {
+            result.push(input[i].toUpperCase());
+        } else {
+            result.push(input[i]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>
