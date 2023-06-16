@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    function change(arr) {
+        let c = '';
+        c = arr[0];
+        arr[0] = arr[1];
+        arr[1] = c;
+        return arr
+    }
+
+    let num = [];
+    for (let i = 0; i < 2; i++) {
+        num[i] = +prompt("Nhập vào số thứ " + (i + 1));
+    }
+    alert("2 số bạn nhập là: " + num)
+    alert("đổi chỗ: " + change(num))
+
+</script>
+</body>
+</html>

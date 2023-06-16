@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function factorial(a) {
+        let result = 1;
+        for (let i = 1; i <= a; i++) {
+            result *= i;
+        }
+        return result
+    }
+
+    let num = +prompt("Nhập số cần tính:");
+    alert("Giai thừa là: " + factorial(num));
+</script>
+</body>
+</html>
