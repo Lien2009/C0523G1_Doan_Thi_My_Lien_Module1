@@ -6,9 +6,26 @@
 </head>
 <body>
 <script>
-// let  =new rray(5)
-let arr = [5]
-document.write(arr)
+    let string = prompt("Nhập dãy ký tự:");
+    let character = prompt("Nhập 1 ký tự bất kỳ:");
+    string = string.split('');
+    alert(checkIn(character, string));
+
+    function checkIn(a, b) {
+        let count = 0;
+        let flag = true;
+        for (let i = 0; i < string.length; i++) {
+            if (a === b[i]) {
+                flag = false;
+                count++;
+            }
+        }
+        if (flag) {
+            return -1;
+        } else {
+            return count;
+        }
+    }
 </script>
 </body>
 </html>
