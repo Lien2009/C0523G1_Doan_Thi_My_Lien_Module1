@@ -7,35 +7,94 @@
 <body>
 <script>
             class Mobile {
-                constructor(pin,tinnhansoan, tinnhanden, tinnhangui) {
+                constructor(pin,draft,send,receive,status){
                 this.pin = pin;
-                this.tinnhansoan = "";
-                this.tinnhanden = tinnhanden;
-                this.tinnhangui = tinnhangui;
+                this.draft = draft;
+                this.send = send;
+                this.receive = receive;
+                this.status = status;
                 }
-                getpin() {
-                    return this.pin;
+                checkStatus() {
+                    if (this.status) {
+                        alert("Điện thoại đang bật");
+                    } else {
+                        alert("Điện thoại đang tắt");
+                    }
                 }
-
-                settinnhansoan(tinnhansoan) {
-                    this.tinnhansoan = tinnhansoan;
+                turnOn(){
+                    if(this.status){
+                        alert("Điện thoại đã bật rồi!!");
+                    } else {
+                        this.status = true;
+                        this.pin--;
+                    }
                 }
-                gettinnhansoan() {
-                    return this.tinnhansoan;
+                turnOff(){
+                    if(this.status){
+                        this.status = false;
+                        this.pin--;
+                    } else {
+                        alert("Điện thoại đã tắt rồi!!");
+                    }
                 }
-                tinnhangui(tinnhansoan, dienthoai) {
-                    dienthoai.settinnhansoan(tinnhansoan);
+                setPin(pin){
+                    this.pin = pin;
                 }
-                // tinnhanden() {
-                //     return this.tinnhansoan;
-                // }
+                setDraft(message){
+                    if (this.status) {
+                        this.draft.unshift(message);
+                        this.pin--;
+                    } else {
+                        alert("Bật điện thoại lên rồi soạn tin");
+                    }
+                }
+                sendMessage(mobileTo, message){
+                    if (this.status) {
+                        this.send.unshift(message);
+                        mobileTo.receive.unshift(message);
+                        this.pin--;
+                    } else {
+                        alert("Bật điện thoại lên rồi soạn tin");
+                    }
+                }
+                receiveMessage(mess){
+                    if (this.status) {
+                        this.receive.unshift(mess);
+                        this.pin--;
+                    } else {
+                        alert("Bật điện thoại lên rồi soạn tin");
+                    }
+                        }
+                getSendMessage(){
+                    if (this.status){
+                        this.pin--;
+                        return this.send;
+                    }else {
+                        alert("Bật điện thoại lên rồi soạn tin");
+                    }
+                }
+                getReceiveMessage(){
+                    if (this.status){
+                        this.pin--;
+                        return this.receive;
+                    }else {
+                        alert("Bật điện thoại lên rồi soạn tin");
+                    }
+                }
             }
-            let nokia = new Mobile (100,'','','');
-            let iphone = new Mobile (20,'','','');
-            // nokia.settinnhansoan("Hẹn gặp lại ngày mai!");
-            // let message = nokia.gettinnhansoan();
-            nokia.tinnhangui("Hẹn gặp lại ngày mai!",iphone);
-            document.write(iphone.gettinnhansoan());
+            let nokia = new Mobile(50,[],[],[],true);
+            let iphone = new Mobile(20,[],[],[],false);
+            // nokia.checkStatus();
+            // iphone.checkStatus();
+            // nokia.turnOff();
+            // nokia.setPin(100);
+            nokia.setDraft("đang ở đâu?");
+            nokia.sendMessage(iphone,"đang ở đâu?");
+            document.write("tin gửi: " + nokia.send + "<br/>");
+            document.write("tin đến: " + iphone.receive + "<br/>");
+            document.write("tin trong hộp thoại gửi: " + nokia.getSendMessage()+ "<br/>")
+            document.write(nokia.pin +"<br/>");
+            document.write(iphone.pin +"<br/>");
         </script>
     </div>
 </body>
