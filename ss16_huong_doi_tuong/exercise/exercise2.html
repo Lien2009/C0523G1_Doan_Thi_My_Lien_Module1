@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+  class Temperature {
+    constructor(celcius) {
+      this.celcius = celcius;
+    }
+    // getcelcius() {
+    //   return this.celcius;
+    // }
+    getF() {
+      return this.celcius * 9/5 + 32;
+    }
+    getKenvin() {
+      return this.celcius + 273.15;
+    }
+  }
+  let myTemparature = new Temperature(25);
+  let f = myTemparature.getF();
+  let k = myTemparature.getKenvin();
+  alert("F: " + f + "; K: " + k);
+</script>
+</body>
+</html>

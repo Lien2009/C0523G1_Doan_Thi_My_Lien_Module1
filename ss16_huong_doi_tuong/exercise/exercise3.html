@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+            class Mobile {
+                constructor(pin,tinnhansoan, tinnhanden, tinnhangui) {
+                this.pin = pin;
+                this.tinnhansoan = "";
+                this.tinnhanden = tinnhanden;
+                this.tinnhangui = tinnhangui;
+                }
+                getpin() {
+                    return this.pin;
+                }
+
+                settinnhansoan(tinnhansoan) {
+                    this.tinnhansoan = tinnhansoan;
+                }
+                gettinnhansoan() {
+                    return this.tinnhansoan;
+                }
+                tinnhangui(tinnhansoan, dienthoai) {
+                    dienthoai.settinnhansoan(tinnhansoan);
+                }
+                // tinnhanden() {
+                //     return this.tinnhansoan;
+                // }
+            }
+            let nokia = new Mobile (100,'','','');
+            let iphone = new Mobile (20,'','','');
+            // nokia.settinnhansoan("Hẹn gặp lại ngày mai!");
+            // let message = nokia.gettinnhansoan();
+            nokia.tinnhangui("Hẹn gặp lại ngày mai!",iphone);
+            document.write(iphone.gettinnhansoan());
+        </script>
+    </div>
+</body>
+</html>
