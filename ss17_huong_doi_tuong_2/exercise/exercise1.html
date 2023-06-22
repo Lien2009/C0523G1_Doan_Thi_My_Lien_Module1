@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đơn giản</title>
+</head>
+<body>
+
+<div id="game"></div>
+<script>
+    function Hero(image, top, left, size) {
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+
+        this.getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        this.moveRight = function () {
+            this.left += 100;
+            console.log('ok: ' + this.left);
+        }
+        this.moveDown = function () {
+            this.top += 100;
+            console.log(this.top);
+        }
+        this.moveLeft = function () {
+            this.right += 80;
+            console.log(this.moveLeft);
+        }
+        this.moveUp = function () {
+            this.down += 80;
+            console.log(this.moveUp());
+        }
+    }
+
+    var hero = new Hero('https://anhdep123.com/wp-content/uploads/2020/05/h%C3%ACnh-%E1%BA%A3nh-con-ch%C3%B3.jpg', 20, 30, 200);
+
+    function start() {
+
+        if (hero.left < window.innerWidth - hero.size) { //chỉ đi được sang phải và xuống dưới
+            hero.moveRight();
+        } else if (hero.top < window.innerHeight - hero.size) {
+            hero.moveDown();
+        }
+
+    document.getElementById('game').innerHTML = hero.getHeroElement();
+    setTimeout(start, 500)
+    }
+    start();
+</script>
+</body>
+</html>

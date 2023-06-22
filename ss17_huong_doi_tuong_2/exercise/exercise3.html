@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc và bóng đèn</title>
+</head>
+<body>
+<script>
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        switchOff() {
+            if (this.status === "bật") {
+                this.lamp.statusL = "tắt";
+                return this.status = "tắt";
+            } else {
+                alert("Công tắc đã tắt rồi, đèn tắt");
+            }
+        }
+
+        switchOn() {
+            if (this.status === "bật") {
+                alert("Công tắc đã bật rồi, đèn sáng");
+            } else {
+                this.lamp.statusL = "bật";
+                return this.status = "bật";
+            }
+        }
+
+        connectToLamp(lamp) {
+            return this.lamp = lamp;
+        }
+    }
+
+    class ElectricLamp {
+        constructor(statusL) {
+            this.statusL = statusL;
+        }
+
+    }
+
+    let lamp1 = new ElectricLamp("tắt");
+    let enter = new SwitchButton("tắt", lamp1);
+
+    enter.switchOn();
+    alert("Công tắc đã: " + enter.status)
+    alert("Đèn " + lamp1.statusL);
+
+    enter.switchOff();
+    alert("Đèn " + lamp1.statusL);
+
+    //   class SwitchButton { //cách2
+    //     constructor(status) {
+    //       this.status = status;
+    //     }
+    //     switchOff(){
+    //       if (this.status === "bật") {
+    //         this.status = "tắt";
+    //         alert("Bạn vừa tắt công tắc")
+    //       } else {
+    //         alert("Công tắc đã tắt rồi");
+    //       }
+    //     }
+    //     switchOn(){
+    //       if(this.status === "tắt") {
+    //         this.status = "bật";
+    //         alert("Bạn vừa bật công tắc");
+    //       } else {
+    //         alert("Công tắc đã bật rồi");
+    //       }
+    //     }
+    //   }
+    //   class ElectricLamp {
+    //     constructor (statusL) {
+    //       this.statusL = statusL;
+    //     }
+    // turnOn(button){
+    //       if(button.status === "tắt"){
+    //         alert("Bật công tắc đi");
+    //       } else {
+    //         this.statusL = "on";
+    //         alert("Đèn sáng");
+    //       }
+    // }
+    // turnOff(button){
+    //   if(button.status === "tắt"){
+    //     this.statusL = "off";
+    //     alert("Đèn tắt");
+    //   } else {
+    //     alert("Tắt công tắc đi");
+    //   }
+    // }
+    //   }
+    //   let enter = new SwitchButton("bật");
+    //   let lamp = new ElectricLamp("off");
+    //   enter.switchOn();
+    //   enter.switchOff();
+    //   enter.switchOn();
+    //   enter.switchOff();
+    //   enter.switchOn();
+    //   enter.switchOff();
+    //   enter.switchOn();
+    //   enter.switchOff();
+    //   enter.switchOn();
+    //   enter.switchOff();
+    //   lamp.turnOn(enter);
+    //   enter.switchOn();
+    //   lamp.turnOn(enter);
+    //   document.write(lamp.statusL);
+</script>
+</body>
+</html>
