@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập số");
+    let arr = number.split('');
+    // alert(arr)
+
+
+    let check = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let text = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
+    if (number === "10") { //TH riêng in ra 10
+        arr.splice(0,2,"mười")
+    }
+    if (arr.length < 2) { //1 chữ số
+        for (let j = 0; j < check.length; j++) {
+            if (arr[0] === check[j]) {
+
+                arr.splice(0, 1, text[j]);
+            }
+        }
+
+    } else if (arr.length < 3) { //2 chữ số
+        if (arr[0] === "1") { //mười mấy
+            for (let i = 1; i < arr.length; i++) {
+                for (let j = 0; j < check.length; j++) {
+                    if (arr[i] === check[j]) {
+                        arr.splice(i - 1, 2, "mười", text[j]);
+                    }
+                }
+            }
+        } else { //từ 20 đến 99
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < check.length; j++) {
+                    if (arr[i] === check[j]) {
+                        arr.splice(i, 1, text[j], "mươi");
+                    }
+                }
+            }
+            arr.pop();
+        }
+    // } else if (arr.length < 4) { //3 chữ số
+    //     for (let i = 0; i < arr.length; i++) {
+    //         for (let j = 0; j < check.length; j++) {
+    //             if (arr[i] === check[j]) {
+    //                 arr.splice()
+    // }}}
+        }
+    if (arr[arr.length-1] === "không"){
+        arr.pop()
+    }
+    alert(arr.join(' '))
+</script>
+</body>
+</html>

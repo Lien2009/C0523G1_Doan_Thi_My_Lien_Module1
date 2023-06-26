@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let multiDenominator = 1;
+    let num = 0;
+    let newNumerators = [];
+
+    for (let i = 0; i < denominators.length; i++) {
+        multiDenominator *= denominators[i];
+    }
+    document.write("Mẫu số chung là: " + multiDenominator + "<br/>");
+
+    for (let j = 0; j < numerators.length; j++) {
+        num = multiDenominator / denominators[j] * numerators[j];
+        newNumerators.push(num);
+    }
+    document.write("Tử số sau khi quy đồng lần lượt là: " + newNumerators + "<br/>");
+    let max = newNumerators[0];
+
+    for (let k = 0; k < newNumerators.length; k++) {
+        if (newNumerators[k] > max) {
+            max = newNumerators[k];
+        }
+    }
+    document.write("Chỉ số của phân số lớn nhất là: " + newNumerators.indexOf(max) + "<br/>");
+</script>
+</body>
+</html>
