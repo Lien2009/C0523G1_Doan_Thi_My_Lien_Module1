@@ -6,16 +6,24 @@
 </head>
 <body>
 <script>
-  let salary = +prompt("Nhập lương nhân viên:");
+
   let tax = 0;
   let money = 0;
-  if (salary > 15000000) {
-    tax = 0.2 * salary;
-  } else if (salary >=7000000) {
-    tax = 0.1 * salary;
-  } else {
-    tax = 0.05 * salary;
-  }
+  let salary;
+  do {
+      salary = +prompt("Nhập lương nhân viên:");
+      if (salary > 15000000) {
+          tax = 0.2 * salary;
+      } else if (salary >=7000000) {
+          tax = 0.1 * salary;
+      } else {
+          tax = 0.05 * salary;
+      }
+      if (salary <= 0){
+          alert("Nhập lại lương lớn hơn 0")
+      }
+  } while (salary<=0)
+
   money = salary - tax;
   alert ("Thuế cần đóng: " + tax + "; Lương ròng nhận được: " + money);
 </script>

@@ -6,13 +6,22 @@
 </head>
 <body>
 <script>
-  let kyTu = prompt("Nhập ký tự cần kiểm tra");
-  let nguyenAm = "o,u,i,a,e,O,U,I,A,E";
-  if (nguyenAm.includes(kyTu)){
-    alert("Đây là nguyên âm");
-  } else {
-    alert("Đây là phụ âm");
-  }
+    let kyTu;
+    let nguyenAm = "o,u,i,a,e,O,U,I,A,E";
+    do {
+        kyTu = prompt("Nhập ký tự cần kiểm tra:")
+        if (!isNaN(kyTu)) { //kiểm tra là số
+            alert("Nhập lại ký tự là chữ");
+        } else {
+            break;
+        }
+    } while (true)
+    if (nguyenAm.includes(kyTu)){
+        alert("Đây là nguyên âm");
+    } else {
+        alert("Đây là phụ âm");
+    }
+
 </script>
 </body>
 </html>
