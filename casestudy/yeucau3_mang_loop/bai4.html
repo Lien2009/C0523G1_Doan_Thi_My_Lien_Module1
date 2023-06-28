@@ -41,27 +41,34 @@
         <td>7</td>
         <td>Thoát gọi món</td>
     </tr>
+</table>
+<br><br>
+<button onclick="order()">Gọi nước</button>
     <script>
-        let chonNuoc;
-        let sTT = [1, 2, 3, 4, 5, 6];
-        let donGia = ["10", "20", "20", "20", "8", "25"];
-        let soLuong = 0;
-        let sum = 0;
-        do {
-            chonNuoc = +prompt("Nhập STT loại nước bạn muốn chọn:");
-            for (let i = 0; i < sTT.length; i++) {
-                if (chonNuoc === sTT[i]) {
-                    soLuong = +prompt("Đơn giá là: " + donGia[i] + " . Nhập số lượng: ");
-                    sum = soLuong * donGia[i];
-                    alert("Tổng thanh toán: " + sum);
+        function order(){
+            let chonNuoc;
+            let sTT = [1, 2, 3, 4, 5, 6];
+            let donGia = ["10", "20", "20", "20", "8", "25"];
+            let soLuong = 0;
+            let sum = 0;
+            do {
+                chonNuoc = +prompt("Nhập STT loại nước bạn muốn chọn:");
+                for (let i = 0; i < sTT.length; i++) {
+                    if (chonNuoc === sTT[i]) {
+                        soLuong = +prompt("Đơn giá là: " + donGia[i] + " . Nhập số lượng: ");
+                        sum = soLuong * donGia[i];
+                        alert("Tổng thanh toán: " + sum);
+                    }
                 }
-            }
                 if (chonNuoc === 7) {
-                    break;
+                    let a = confirm("Chắc chắn thoát gọi nước?");
+                    if (a === true){
+                        break;
+                    }
                 }
             }
             while (true)
+        }
     </script>
-</table>
 </body>
 </html>

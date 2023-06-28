@@ -7,17 +7,18 @@
 <body>
 <script>
     let arrayA = [7,2,5,3,5,3];
-    let arrayB = [7,2,5,4,6,3,5,3];
+    let arrayB = [7,2,5,4,6,3,5,3,1];
+    debugger
     for (let i = 0; i < arrayB.length; i++) {
         for (let j = 0; j < arrayA.length; j++) {
             if (arrayB[i] === arrayA[j]){
                 arrayB.splice(i,1);
                 arrayA.splice(j,1);
-                i--;
+                j--;
             }
         }
-    } document.write(arrayA + "<br/>");
-    document.write(arrayB);
+    } document.write(arrayA.sort() + "<br/>");
+    document.write(arrayB.sort());
 
     // debugger
     // for (let i = 0; i < arrayB.length;) {
