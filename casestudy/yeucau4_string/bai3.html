@@ -7,7 +7,7 @@
 <body>
 <script>
   let s1 = "aabccd";
-  let s2 = "adcaa";
+  let s2 = "adcbaa";
   let arr1 = s1.split('');
   let arr2 = s2.split('');
   let newArr = [];
@@ -18,7 +18,7 @@
         newArr.push(arr1[i]);
         arr1.splice(i,1);
         arr2.splice(j,1);
-        j--;
+        j = -1;
       }
     }
   } document.write(newArr)
